@@ -48,3 +48,14 @@ DegreeProgram Student::getDegreeProgram()
 {
   return this->degreeProgram;
 }
+
+void Student::print()
+{
+  std::cout << studentID << "\t"
+            << "First Name: " << firstName << "\t"
+            << "Last Name: " << lastName << "\t"
+            << "Age: " << age << "\t"
+            << "daysInCourse: {" << daysInCourses[0] << ", " << daysInCourses[1] << ", " << daysInCourses[2] << "}\t"
+            << "Degree Program: " << degreeString[static_cast<int>(getDegreeProgram())]
+            << std::endl;
+}

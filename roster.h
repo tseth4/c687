@@ -7,13 +7,12 @@ private:
   const static int numberOfStudents = 5;
 
   // Tracks the last student added
-  int lastIndex;
+  int lastIndex = -1;
 
   // Array of pointers to students
   Student *classRosterArray[numberOfStudents];
 
 public:
-  // Roster();
   void add(string studentID,
            string firstName,
            string lastName,

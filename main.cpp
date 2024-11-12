@@ -6,7 +6,7 @@
 int main()
 {
 
-  Roster roster;
+  Roster classRoster;
   // Print program information
   cout << "Course Title: Scripting and Programming - Applications (C867)" << endl;
   cout << "Programming Language: C++" << endl;
@@ -25,8 +25,10 @@ int main()
 
   for (int i = 0; i < studentDataSize; i++)
   {
-    roster.parse(studentData[i]);
+    classRoster.parse(studentData[i]);
   }
+
+  classRoster.printAll();
 }
 
 // F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:
@@ -39,7 +41,11 @@ int main()
 
 // 4.  Convert the following pseudo code to complete the rest of the  main() function:
 
+//TODO:
 // classRoster.printAll();
+// c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
+
+
 
 // classRoster.printInvalidEmails();
 

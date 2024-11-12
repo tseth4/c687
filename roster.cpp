@@ -2,18 +2,6 @@
 #include <string>
 #include "roster.h"
 
-// Roster::Roster()
-// {
-//   lastIndex = -1;
-//   for (int i = 0; i < 5; i++)
-//   {
-//     classRosterArray[i] = nullptr;
-//   }
-// }
-
-// Roster::~Roster()
-// {
-// }
 Roster::~Roster() = default;
 
 void Roster::add(
@@ -47,6 +35,11 @@ void Roster::remove(string studentID)
 
 void Roster::printAll()
 {
+  // c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
+  for (int i = 0; i <= lastIndex; i++)
+  {
+    classRosterArray[i]->print();
+  }
 }
 
 void Roster::printAverageDaysInCourse(string studentID)
@@ -116,7 +109,6 @@ void Roster::parse(string studentData)
     degree = DegreeProgram::SECURITY;
   else if (degreeStr == "NETWORK")
     degree = DegreeProgram::NETWORK;
-
   Roster::add(studentID, firstName, lastName, email, age,
               days1, days2, days3, degree);
 }
