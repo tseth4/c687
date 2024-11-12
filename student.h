@@ -6,7 +6,7 @@ using namespace std;
 class Student
 {
 public:
-  const static int daysInCoursesSize;
+  const static int daysInCoursesSize = 3;
 private:
   string studentID;
   string firstName;

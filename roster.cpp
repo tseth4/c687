@@ -1,20 +1,20 @@
-// #pragma once
 #include <iostream>
 #include <string>
 #include "roster.h"
 
-Roster::Roster()
-{
-  lastIndex = -1;
-  for (int i = 0; i < 5; i++)
-  {
-    classRosterArray[i] = nullptr;
-  }
-}
+// Roster::Roster()
+// {
+//   lastIndex = -1;
+//   for (int i = 0; i < 5; i++)
+//   {
+//     classRosterArray[i] = nullptr;
+//   }
+// }
 
-Roster::~Roster()
-{
-}
+// Roster::~Roster()
+// {
+// }
+Roster::~Roster() = default;
 
 void Roster::add(
     string studentID,

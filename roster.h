@@ -13,8 +13,7 @@ private:
   Student *classRosterArray[numberOfStudents];
 
 public:
-  Roster();
-  ~Roster();
+  // Roster();
   void add(string studentID,
            string firstName,
            string lastName,
@@ -33,4 +32,6 @@ public:
   Student *getStudentAt(int index);
 
   void parse(const string studentData);
+
+  ~Roster();
 };
