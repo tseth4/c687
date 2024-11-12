@@ -32,6 +32,13 @@ int main()
   classRoster.printAll();
 
   classRoster.printInvalidEmails();
+
+  // Print average days in course for each student
+  for (int i = 0; i < studentDataSize; i++)
+  {
+    Student *student = classRoster.getStudentAt(i);
+    classRoster.printAverageDaysInCourse(student->getStudentID());
+  }
 }
 
 // F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:
@@ -43,13 +50,6 @@ int main()
 // 3.  Add each student to classRoster.
 
 // 4.  Convert the following pseudo code to complete the rest of the  main() function:
-
-// classRoster.printAll();
-// c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
-
-
-//TODO:
-// classRoster.printInvalidEmails();
 
 // //loop through classRosterArray and for each element:
 
