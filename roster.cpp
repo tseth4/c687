@@ -1,11 +1,15 @@
-#pragma once
+// #pragma once
 #include <iostream>
 #include <string>
 #include "roster.h"
-#include "student.h"
 
 Roster::Roster()
 {
+  lastIndex = -1;
+  for (int i = 0; i < 5; i++)
+  {
+    classRosterArray[i] = nullptr;
+  }
 }
 
 Roster::~Roster()
@@ -65,13 +69,22 @@ Student *Roster::getStudentAt(int index)
 void Roster::parse(string studentData)
 {
   // Parse each string
+
+  // str.substr(startPosition, length);
+
+  // str.find(char_or_substring, startPosition);
+  // start position is where the search should begin.
+
   int rhs = studentData.find(",");
+  // sub string from 0 to comma
   string studentID = studentData.substr(0, rhs);
 
   int lhs = rhs + 1;
+  // find the next cpmma with a start position at of the last plus 1
   rhs = studentData.find(",", lhs);
+  // sub string from the first comma plus 1 to
   string firstName = studentData.substr(lhs, rhs - lhs);
-
+  cout << "firstName: " << firstName << "\n";
   lhs = rhs + 1;
   rhs = studentData.find(",", lhs);
   string lastName = studentData.substr(lhs, rhs - lhs);
