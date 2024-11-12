@@ -2,7 +2,15 @@
 #include <string>
 #include "roster.h"
 
-Roster::~Roster() = default;
+Roster::~Roster()
+{
+  cout << "Destructor";
+  for (int i = 0; i < numberOfStudents; i++)
+  {
+    delete classRosterArray[i];
+    classRosterArray[i] = nullptr;
+  }
+}
 
 void Roster::add(
     string studentID,
@@ -31,11 +39,23 @@ void Roster::add(
 
 void Roster::remove(string studentID)
 {
+  for (int i = 0; i <= lastIndex; i++)
+  {
+    if (classRosterArray[i]->getStudentID() == studentID)
+    {
+      Student* temp = classRosterArray[i]; 
+      classRosterArray[i] = classRosterArray[lastIndex];
+      classRosterArray[lastIndex] = temp;
+      lastIndex--; 
+      cout << studentID << " removed" << std::endl;
+      return;
+    }
+  }
+  cout << studentID << " not found" << std::endl;
 }
 
 void Roster::printAll()
 {
-  // c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
   for (int i = 0; i <= lastIndex; i++)
   {
     classRosterArray[i]->print();
@@ -72,6 +92,13 @@ void Roster::printInvalidEmails()
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
 {
+  for (int i = 0; i <= lastIndex; i++)
+  {
+    if (classRosterArray[i]->getDegreeProgram() == degreeProgram)
+    {
+      classRosterArray[i]->print();
+    }
+  }
 }
 
 Student *Roster::getStudentAt(int index)
