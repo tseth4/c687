@@ -12,11 +12,12 @@ int main()
   cout << "Programming Language: C++" << endl;
   cout << "WGU Student ID: [Your ID]" << endl;
   cout << "Name: Tristan Setha" << endl
+
        << endl;
 
   // Student data (add your information as the last item)
   const string studentData[] = {
-      "A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
+      "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
       "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
       "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
       "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
@@ -29,6 +30,8 @@ int main()
   }
 
   classRoster.printAll();
+
+  classRoster.printInvalidEmails();
 }
 
 // F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:
@@ -41,12 +44,11 @@ int main()
 
 // 4.  Convert the following pseudo code to complete the rest of the  main() function:
 
-//TODO:
 // classRoster.printAll();
 // c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
 
 
-
+//TODO:
 // classRoster.printInvalidEmails();
 
 // //loop through classRosterArray and for each element:
