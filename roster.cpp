@@ -55,6 +55,7 @@ void Roster::remove(string studentID)
   cout << studentID << " not found" << std::endl;
 }
 
+// PRINTS TAB SEPERATED LIST OF STUDENT DATA
 void Roster::printAll()
 {
   for (int i = 0; i <= lastIndex; i++)
