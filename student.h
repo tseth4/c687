@@ -17,7 +17,9 @@ private:
   DegreeProgram degreeProgram;
 
 public:
+  // DEFAULT CONSTRUCTOR
   Student();
+  // CONSTRUCTOR
   Student(string studentID,
           string firstName,
           string lastName,
@@ -25,9 +27,9 @@ public:
           int age,
           int daysInCourse[],
           DegreeProgram degreeProgram);
-  // Destructor
+  // DESTRUCTOR
   ~Student();
-
+  // GETTERS
   string getStudentID();
   string getFirstName();
   string getLastName();
@@ -35,7 +37,7 @@ public:
   int getAge();
   int *getDaysInCourses();
   DegreeProgram getDegreeProgram();
-
+  // SETTERS
   void setStudentID(string studentID);
   void setFirstName(string firstName);
   void setLastName(string lastName);
@@ -43,8 +45,6 @@ public:
   void setAge(int age);
   void setDaysInCourses(int daysInCourses[]);
   void setDegreeProgram(DegreeProgram degreeProgram);
-
-  static void printHeader();
 
   void print();
 };

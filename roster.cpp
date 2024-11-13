@@ -2,9 +2,10 @@
 #include <string>
 #include "roster.h"
 
+// DESTRUCTOR
 Roster::~Roster()
 {
-  cout << "Destructor";
+  cout << "DESTRUCTOR \n";
   for (int i = 0; i < numberOfStudents; i++)
   {
     delete classRosterArray[i];
@@ -43,10 +44,10 @@ void Roster::remove(string studentID)
   {
     if (classRosterArray[i]->getStudentID() == studentID)
     {
-      Student* temp = classRosterArray[i]; 
+      Student *temp = classRosterArray[i];
       classRosterArray[i] = classRosterArray[lastIndex];
       classRosterArray[lastIndex] = temp;
-      lastIndex--; 
+      lastIndex--;
       cout << studentID << " removed" << std::endl;
       return;
     }

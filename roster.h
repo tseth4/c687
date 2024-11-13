@@ -29,8 +29,8 @@ public:
   void printByDegreeProgram(DegreeProgram degreeProgram);
 
   Student *getStudentAt(int index);
-
+  
   void parse(const string studentData);
-
+  // DESTRUCTOR
   ~Roster();
 };

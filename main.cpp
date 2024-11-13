@@ -9,7 +9,7 @@ int main()
   // Print program information
   cout << "Course Title: Scripting and Programming - Applications (C867)" << endl;
   cout << "Programming Language: C++" << endl;
-  cout << "WGU Student ID: [Your ID]" << endl;
+  cout << "WGU Student ID: 012068201" << endl;
   cout << "Name: Tristan Setha" << endl
 
        << endl;
@@ -39,7 +39,7 @@ int main()
     classRoster.printAverageDaysInCourse(student->getStudentID());
   }
   cout << "\n";
-  cout << "Degree program SOFTWARE: \n";
+  cout << "Students by degree program SOFTWARE: \n";
   classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
   cout << "\n";
 

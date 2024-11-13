@@ -1,7 +1,7 @@
 #include <iostream>
 #include "student.h"
 
-// Default Constructor
+// CONSTRUCTOR
 Student::Student()
 {
   this->studentID = "";
@@ -35,6 +35,7 @@ Student::Student(string studentID,
   this->degreeProgram = degreeProgram;
 }
 
+// DESTRUCTOR
 Student::~Student() {}
 
 // Getters
@@ -47,6 +48,22 @@ int *Student::getDaysInCourses() { return this->daysInCourses; }
 DegreeProgram Student::getDegreeProgram()
 {
   return this->degreeProgram;
+}
+
+// Setters
+void Student::setStudentID(string studentID) { this->studentID = studentID; }
+void Student::setFirstName(string firstName) { this->firstName = firstName; }
+void Student::setLastName(string lastName) { this->lastName = lastName; }
+void Student::setEmail(string email) { this->email = email; }
+void Student::setAge(int age) { this->age = age; }
+void Student::setDaysInCourses(int daysInCourses[])
+{
+  for (int i = 0; i < daysInCoursesSize; i++)
+    this->daysInCourses[i] = daysInCourses[i];
+}
+void Student::setDegreeProgram(DegreeProgram degreeProgram)
+{
+  this->degreeProgram = degreeProgram;
 }
 
 void Student::print()
