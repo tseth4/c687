@@ -7,7 +7,6 @@ int main()
 
   Roster classRoster;
   // PRINT PROGRAM INFORMATION
-  cout << "\n";
   cout << "Course Title: Scripting and Programming - Applications (C867)" << endl;
   cout << "Programming Language: C++" << endl;
   cout << "WGU Student ID: 012068201" << endl;
@@ -22,7 +21,7 @@ int main()
       "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
       "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
       "A5,Tristan,Setha,tsetha@wgu.edu,31,40,30,15,SOFTWARE"};
-
+  
   // STUDENT DATA SIZE CONSTANT
   const int studentDataSize = 5;
 
@@ -33,18 +32,11 @@ int main()
   }
 
   // PRINT TAB SEPERATED LIST OF STUDENT DATA
-  cout << "STUDENT DATA: \n";
   classRoster.printAll();
   // PRINT INVALID EMAILS
-  cout << "\n";
-
-  cout << "INVALID EMAILS: \n";
-
   classRoster.printInvalidEmails();
-  cout << "\n";
 
   // PRINT AVERAGE DAYS IN COURSE FOR EACH STUDENT
-  cout << "AVERAGE DAYS IN COURSE FOR EACH STUDENT: \n";
   for (int i = 0; i < studentDataSize; i++)
   {
     Student *student = classRoster.getStudentAt(i);
@@ -59,7 +51,6 @@ int main()
   // REMOVE A3
   classRoster.remove("A3");
   cout << "\n";
-  cout << "STUDENT DATA: \n";
   classRoster.printAll();
   cout << "\n";
   // SHOULD RETURN '<student-id> not found'
